@@ -207,7 +207,7 @@ From this machine — syncs the tree and deploys on the infra host:
 scripts/push.sh
 ```
 
-Or on the infra machine (`the infra machine`), from `~/projects/nobotreply`:
+Or on the infra machine, from `~/projects/nobotreply`:
 
 ```bash
 npm install            # once — installs wrangler, the only dev dependency
@@ -221,34 +221,35 @@ matching how the other projects on that machine are set up.
 
 ### Custom domain
 
-Both `nobotreply.com` and `www.nobotreply.com` are attached to the Pages project.
-`www` is 301'd to the apex by `public/_redirects`, so it never serves a duplicate.
-
-Two proxied CNAMEs are needed:
+Both `nobotreply.com` and `www.nobotreply.com` are attached to the Pages project,
+with certificates issued. Two proxied CNAMEs point them at the project:
 
 ```
 nobotreply.com      CNAME  nobotreply.pages.dev  (proxied)
 www.nobotreply.com  CNAME  nobotreply.pages.dev  (proxied)
 ```
 
+`www` then 301s to the apex — via a **Bulk Redirect**, not a `_redirects` file.
+Cloudflare Pages only matches paths in `_redirects`, not hostnames, so a
+`https://www.example.com/* …` rule there is silently ignored. The account-level
+redirect list `nobotreply_www_to_apex` holds the single entry:
+
+| source | target | status | options |
+| --- | --- | --- | --- |
+| `www.nobotreply.com` | `https://nobotreply.com` | 301 | preserve query string, subpath matching, preserve path suffix |
+
+`scripts/reconcile-dns.sh` creates or updates the two records:
+
 ```bash
-sudo scripts/reconcile-dns.sh   # creates/updates both records
+sudo scripts/reconcile-dns.sh
 ```
 
-That script needs the Cloudflare API token to include the `nobotreply.com` zone.
-The token in `/opt/infra/secrets/cloudflare.env` has `DNS:Edit` scoped to
-**specific zones** — it currently covers only `unlocalhosted.com`, so DNS calls
-for any other zone (including this one) return `403 Authentication error`.
-
-Fix either way:
-
-- **Token** — My Profile → API Tokens → edit the token → the `DNS` permission's
-  Zone Resources → Include → All zones (or add `nobotreply.com`), then re-run
-  the script.
-- **Manual** — DNS → Records → Add record, twice, using the two CNAMEs above
-  with Proxy enabled.
-
-`Pages:Edit` is account-wide, which is why deploying works regardless.
+It needs the Cloudflare token to include the `nobotreply.com` zone. The token in
+the infra secret store has `DNS:Edit` scoped to **specific zones** — when this
+zone was new it was not covered and every DNS call returned
+`403 Authentication error`, while `Pages:Edit` kept working because that one is
+account-wide. If you add another zone later, add it to the token's Zone
+Resources first.
 
 ### Any other host
 
