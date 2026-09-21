@@ -85,13 +85,25 @@ content/
   en.json              source of truth — every other locale mirrors its keys
   ar.json … vi.json    17 translations
 src/style.css          the single stylesheet, inlined into every page
-public/                copied verbatim into dist/ (favicon, og-image, CNAME)
+public/                copied verbatim into dist/ (favicon, og-image)
 tools/
-  verify.mjs           317 assertions across all generated pages
-  make-og.py           regenerates public/og-image.png (1200x630)
+  og-card.html         the social card, authored as real HTML + inline SVG
+  make-og.sh           renders og-card.html -> public/og-image.png at 2x
+  verify.mjs           335 assertions across all generated pages
   shot.sh              headless-Chrome screenshot helper
 dist/                  generated output — deploy this directory
 ```
+
+### The social card
+
+`tools/og-card.html` is the source; `npm run og` renders it. It is written as
+plain HTML with **inline SVG for every icon** — the bubble mark, the ✕/✓ discs and
+the muted dash — so nothing depends on a font glyph, an emoji set or an external
+asset. Chrome renders it at 2x and Pillow downsamples with Lanczos, because at 1x
+the small icons come out visibly soft.
+
+To change the copy or the layout, edit the HTML and re-run `npm run og`. The card
+is deliberately one image for all locales; `og:locale` still varies per page.
 
 ## Commands
 
@@ -153,14 +165,14 @@ optional `reason` string that lands in the run summary.
 Not `wrangler-action`, deliberately:
 
 > The Cloudflare token in `/opt/infra/secrets/cloudflare.env` is **IP-restricted
-> to platform-01**, so a GitHub runner cannot use it. That restriction is worth
+> to the infra machine**, so a GitHub runner cannot use it. That restriction is worth
 > keeping.
 
 So the job builds and verifies on the runner, then streams the source over SSH to
 the infra machine, which runs the real deploy with the token that never leaves it:
 
 ```
-GitHub runner ──tar over ssh──▶ platform-01 ──wrangler──▶ Cloudflare Pages
+GitHub runner ──tar over ssh──▶ the infra machine ──wrangler──▶ Cloudflare Pages
    build + verify                 forced command            nobotreply.com
 ```
 
@@ -168,18 +180,18 @@ The SSH key is a dedicated `nobotreply-ci-deploy` ed25519 with a forced
 `command=` in `authorized_keys`, so it can do exactly one thing:
 
 ```
-restrict,command="/home/admin/bin/nobotreply-ci-deploy" ssh-ed25519 AAAA… nobotreply-ci-deploy
+restrict,command="~/bin/nobotreply-ci-deploy" ssh-ed25519 AAAA… nobotreply-ci-deploy
 ```
 
 To revoke CI's access, delete that line from
-`admin@platform-01:~/.ssh/authorized_keys` and the `DEPLOY_SSH_KEY` secret.
+the deploy user’s `~/.ssh/authorized_keys` and the `DEPLOY_SSH_KEY` secret.
 
 | Secret | Purpose |
 | --- | --- |
 | `DEPLOY_SSH_KEY` | private half of `nobotreply-ci-deploy` |
-| `DEPLOY_KNOWN_HOSTS` | pinned host key for platform-01 |
-| `DEPLOY_HOST` | `95.217.161.17` |
-| `DEPLOY_USER` | `admin` |
+| `DEPLOY_KNOWN_HOSTS` | pinned host key for the infra machine |
+| `DEPLOY_HOST` | the infra machine's address |
+| `DEPLOY_USER` | the deploy user |
 
 If you ever want CI to call Cloudflare directly instead, create a token with
 `Account → Cloudflare Pages → Edit`, leave **Client IP Address Filtering off**,
@@ -195,7 +207,7 @@ From this machine — syncs the tree and deploys on the infra host:
 scripts/push.sh
 ```
 
-Or on the infra machine (`platform-01`), from `~/projects/nobotreply`:
+Or on the infra machine (`the infra machine`), from `~/projects/nobotreply`:
 
 ```bash
 npm install            # once — installs wrangler, the only dev dependency

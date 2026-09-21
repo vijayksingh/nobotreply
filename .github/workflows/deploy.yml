@@ -10,7 +10,7 @@ name: deploy
 #
 # How it deploys, and why it is not `wrangler-action`:
 #   The Cloudflare token in the infra secret store is IP-restricted to
-#   platform-01 (95.217.161.17), so a GitHub runner cannot use it — by design.
+#   the infra machine (documentation IP — set DEPLOY_HOST to yours), so a GitHub runner cannot use it — by design.
 #   Instead this job builds and verifies here, then streams the source over SSH
 #   to the infra machine, whose forced-command entry point runs the real deploy.
 #   The Cloudflare credential never leaves that host.

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Entry point for the GitHub Actions deploy key. Installed on platform-01 at
-# /home/admin/bin/nobotreply-ci-deploy and pinned via a forced `command=` in
+# Entry point for the GitHub Actions deploy key. Installed on the infra machine at
+# ~/bin/nobotreply-ci-deploy and pinned via a forced `command=` in
 # authorized_keys, so this key can do exactly one thing and nothing else.
 #
 # Reads a gzipped tar of the repository on stdin, refreshes the working tree,

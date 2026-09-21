@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--
+  Source for public/og-image.png. Rendered by tools/make-og.sh at 2x and
+  downsampled, so every icon stays crisp. All artwork is inline SVG: no web
+  fonts, no images, nothing that can fail to load at render time.
+-->
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { width: 1200px; height: 630px; }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background: #fff;
+        color: #000;
+        padding: 56px 74px 44px;
+        display: flex;
+        flex-direction: column;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .brand { display: flex; align-items: center; gap: 23px; }
+
+    .mark { width: 74px; height: 74px; flex: none; display: block; }
+
+    h1 {
+        font-size: 74px;
+        font-weight: 700;
+        letter-spacing: -0.045em;
+        line-height: 0.94;
+    }
+
+    .tagline {
+        margin-top: 21px;
+        font-size: 32px;
+        line-height: 1.24;
+        color: #6e6e73;
+        letter-spacing: -0.012em;
+    }
+
+    /* The panel mirrors the chat window on the site, so the card and the page
+       read as the same object. It flexes to absorb the leftover height, which
+       keeps the rows optically centred instead of leaving a gap above the
+       footer. */
+    .panel {
+        flex: 1;
+        justify-content: center;
+        margin: 34px 0;
+        border: 1px solid #e0e0e0;
+        border-radius: 16px;
+        padding: 26px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .row { display: flex; align-items: center; gap: 20px; }
+
+    .row svg { width: 40px; height: 40px; flex: none; display: block; }
+
+    .row .text { font-size: 28px; line-height: 1.2; letter-spacing: -0.006em; }
+
+    .row.bad  .text { color: #8e8e93; }
+    .row.good .text { color: #1d1d1f; font-weight: 600; }
+    .row.none .text { color: #6e6e73; font-style: italic; }
+
+    footer {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
+    .url { font-size: 27px; font-weight: 700; letter-spacing: -0.015em; }
+
+    .meta { font-size: 23px; color: #6e6e73; letter-spacing: -0.005em; }
+</style>
+</head>
+<body>
+
+    <div class="brand">
+        <!-- Mark: a speech bubble with a slash through it — the reply nobody wrote. -->
+        <svg class="mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="64" height="64" rx="15" fill="#000"/>
+            <path d="M20 16h24a7 7 0 0 1 7 7v13a7 7 0 0 1-7 7H33l-8.5 7.5V43H20a7 7 0 0 1-7-7V23a7 7 0 0 1 7-7Z"
+                  stroke="#fff" stroke-width="4.2" stroke-linejoin="round"/>
+            <path d="M24.6 39.4 39.4 24.6" stroke="#ff3b30" stroke-width="5.4" stroke-linecap="round"/>
+        </svg>
+
+        <h1>no bot reply.</h1>
+    </div>
+
+    <p class="tagline">Stop sending AI-written replies under your own name.</p>
+
+    <div class="panel">
+
+        <div class="row bad">
+            <!-- ✕ — filled disc, round-capped strokes, optically centred -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" fill="#ff3b30"/>
+                <path d="M8.7 8.7 15.3 15.3M15.3 8.7 8.7 15.3"
+                      stroke="#fff" stroke-width="2.3" stroke-linecap="round"/>
+            </svg>
+            <span class="text">&ldquo;Great question! Thanks so much for reaching out&hellip;&rdquo;</span>
+        </div>
+
+        <div class="row good">
+            <!-- ✓ — identical disc geometry so the pair reads as a set -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" fill="#34c759"/>
+                <path d="M7.3 12.5 10.4 15.6 16.8 8.9"
+                      stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="text">&ldquo;thursday, i think. sarah owns it&rdquo;</span>
+        </div>
+
+        <div class="row none">
+            <!-- — em dash in a muted disc: the third option, saying nothing -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" fill="#d2d2d7"/>
+                <path d="M7.8 12h8.4" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+            </svg>
+            <span class="text">or say nothing at all</span>
+        </div>
+
+    </div>
+
+    <footer>
+        <span class="url">nobotreply.com</span>
+        <span class="meta">18 languages</span>
+    </footer>
+
+</body>
+</html>

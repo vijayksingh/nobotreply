@@ -9,7 +9,7 @@
     "build:strict": "STRICT=1 node build.mjs",
     "verify": "node tools/verify.mjs",
     "check": "npm run build:strict && npm run verify",
-    "og": "python3 tools/make-og.py",
+    "og": "./tools/make-og.sh",
     "serve": "node build.mjs && python3 -m http.server 8080 --directory dist",
     "audit": "npx --yes lighthouse@12 http://localhost:8080/ --chrome-flags=\"--headless --no-sandbox\" --quiet"
   },
