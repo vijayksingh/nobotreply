@@ -3,12 +3,17 @@ name: deploy
 # Ships to Cloudflare Pages (project `nobotreply`) → https://nobotreply.com
 #
 # Triggers
-#   push to main          automatic deploy of every merged change
-#   push of a v* tag      re-deploy on demand, e.g. `git tag v1.0.1 && git push origin v1.0.1`
-#   workflow_dispatch     the "Run workflow" button in the Actions tab
+#   push to main        deploy every merged change
+#   push of a v* tag    re-deploy on demand:
+#                         git tag v1.0.1 && git push origin v1.0.1
+#   workflow_dispatch   the "Run workflow" button in the Actions tab
 #
-# Every path re-runs the strict build and the full verifier before uploading, so
-# a broken translation or a broken internal link cannot reach production.
+# How it deploys, and why it is not `wrangler-action`:
+#   The Cloudflare token in the infra secret store is IP-restricted to
+#   platform-01 (95.217.161.17), so a GitHub runner cannot use it — by design.
+#   Instead this job builds and verifies here, then streams the source over SSH
+#   to the infra machine, whose forced-command entry point runs the real deploy.
+#   The Cloudflare credential never leaves that host.
 on:
   push:
     branches: [main]
@@ -49,22 +54,44 @@ jobs:
       - name: Verify every generated page
         run: node tools/verify.mjs
 
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          # --branch main is what makes this a *production* deployment; anything
-          # else would land as a preview URL instead of nobotreply.com.
-          command: pages deploy dist --project-name=nobotreply --branch=main
+      - name: Configure SSH
+        env:
+          SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          printf '%s\n' "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Deploy via the infra machine
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+        run: |
+          # The key is pinned to a forced command on the server, so no command
+          # is passed here — it receives this tarball on stdin and deploys.
+          tar czf - \
+            --exclude=./dist --exclude=./node_modules --exclude=./.git \
+            --exclude=./.npm-cache --exclude=./.gh-cache --exclude=./.ssh-ci \
+            --exclude='*.log' . \
+            | ssh -T -i ~/.ssh/id_ed25519 \
+                -o IdentitiesOnly=yes \
+                -o StrictHostKeyChecking=yes \
+                "$DEPLOY_USER@$DEPLOY_HOST"
 
       - name: Summary
+        if: always()
+        env:
+          REASON: ${{ inputs.reason }}
         run: |
           {
-            echo "### Deployed"
+            echo "### Deploy"
             echo ""
+            echo "- **result:** ${{ job.status }}"
             echo "- **ref:** \`${{ github.ref_name }}\` (${{ github.event_name }})"
             echo "- **commit:** \`${{ github.sha }}\`"
             echo "- **url:** https://nobotreply.com"
-            if [ -n "${{ inputs.reason }}" ]; then echo "- **reason:** ${{ inputs.reason }}"; fi
+            if [ -n "$REASON" ]; then echo "- **reason:** $REASON"; fi
           } >> "$GITHUB_STEP_SUMMARY"
