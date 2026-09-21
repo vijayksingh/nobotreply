@@ -1,0 +1,64 @@
+{
+  "lang": "en",
+  "name": "English",
+  "dir": "ltr",
+
+  "title": "No Bot Reply — Stop Sending AI-Written Replies",
+  "description": "Stop sending AI-generated replies under your own name. Write something real, or say nothing at all.",
+  "ogTitle": "No Bot Reply",
+  "ogDescription": "Stop sending AI-generated replies under your own name. Write something real, or say nothing at all.",
+  "shareText": "Stop sending AI-written replies under your own name.",
+
+  "h1": "no bot reply.",
+  "tagline": "Stop sending AI-written replies under your own name.",
+
+  "labelBad": "Don't do this",
+  "labelGood": "Instead, be human:",
+  "labelNone": "Or just don't reply:",
+
+  "you": "You",
+  "them": "Them",
+  "time0": "2:15 PM",
+  "time1": "2:16 PM",
+
+  "chatQuestion": "hey — any idea when the design review doc is due?",
+  "chatSlopPreview": "Great question! Thanks so much for reaching out. The design review document is currently being finalized, and the exact due date depends on a number of factors that are worth walking through carefully.",
+  "chatSlopFull": "\n\nLet me break it down:\n\n**Ownership.** The document is owned by the design team, who are best positioned to confirm the exact date. Review documents of this kind typically require sign-off from several stakeholders before a date can be treated as firm.\n\n**Timeline considerations.** Timelines depend on scope, stakeholder availability, and any upstream dependencies. It's also worth noting that review cycles often shift by a few days as feedback comes in, so any date should be considered provisional.\n\n**Recommended next steps.** I'd suggest checking the shared project tracker, where dates are usually kept up to date. If the date isn't listed there, reaching out to the design team directly would be the fastest path to a definitive answer.\n\nIn summary: the due date depends on the current state of the document and the team's schedule. I'd recommend confirming with the design team for the most accurate answer.\n\nLet me know if you'd like me to expand on any of these points — happy to help!",
+  "chatAnswer": "thursday, i think. sarah owns it",
+  "chatBlast": "Hi! I came across your profile and was genuinely impressed by your work. I help founders 10x their reach with AI-powered content systems. Would love to hop on a quick 15-min call to explore synergies 🚀",
+  "chatNoReplyNote": "Nothing. It was a broadcast, not a conversation — and a person is allowed to leave it there.",
+
+  "h2What": "What's a bot reply?",
+  "pWhat1": "An AI-written message sent from a human account. It lands in a DM, a comment thread, a reply, an inbox — and it has the same shape every time: a compliment, a summary, an offer to help, a call to action. Nobody typed it. Somebody pasted it.",
+  "pWhat2": "It reads like a person right up until you try to talk back to it. Then you find out there was never anyone on the other end of the sentence.",
+
+  "h2Why": "Why it's wrong",
+  "pWhy1": "It's dishonest in a way that's hard to name. The message says *I read what you wrote, and I'm answering you*. It didn't, and it isn't. It's a template wearing your face.",
+  "pWhy2": "It spends the one thing the other person can't get back. They burn a minute parsing your reply before realising there's nothing in it to answer. Now multiply that by everyone you broadcast to.",
+  "pWhy3": "And it's contagious. Once one side of a conversation is automated, the other side stops bothering. You end up with two bots politely summarising each other while the actual question sits there unanswered.",
+
+  "h2Where": "Where it happens",
+  "pWhere1": "Anywhere there's a reply box. It shows up most in:",
+  "whereList": [
+    "DMs and cold outreach",
+    "LinkedIn comments and \"congrats!\" threads",
+    "X / Twitter replies",
+    "Instagram and TikTok comments",
+    "Support inboxes and contact forms",
+    "Cold email follow-ups",
+    "Dating apps",
+    "GitHub issues and pull request reviews"
+  ],
+  "pWhere2": "None of those places were broken. They just weren't built for documents.",
+
+  "principle": "If you have nothing human to say, say nothing. Silence is a valid reply.",
+
+  "quoteIntro": "Or as [Sherry Turkle](https://en.wikipedia.org/wiki/Sherry_Turkle) has said:",
+  "quote": "\"We expect more from technology and less from each other.\"",
+
+  "ctaLabel": "If you get a bot reply, send them this page:",
+  "siteLabel": "nobotreply.com",
+
+  "footerMadeBy": "Made by",
+  "footerInspired": "Inspired by [noslopgrenade.com](https://noslopgrenade.com) and [nohello.net](https://nohello.net), two good practices for better async communication."
+}

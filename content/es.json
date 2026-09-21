@@ -1,0 +1,64 @@
+{
+  "lang": "es",
+  "name": "Español",
+  "dir": "ltr",
+
+  "title": "No Bot Reply — Deja de enviar respuestas escritas por IA",
+  "description": "Deja de enviar respuestas generadas por IA bajo tu propio nombre. Escribe algo real, o no digas nada.",
+  "ogTitle": "No Bot Reply",
+  "ogDescription": "Deja de enviar respuestas generadas por IA bajo tu propio nombre. Escribe algo real, o no digas nada.",
+  "shareText": "Deja de enviar respuestas escritas por IA bajo tu propio nombre.",
+
+  "h1": "no más respuestas de bot.",
+  "tagline": "Deja de enviar respuestas escritas por IA bajo tu propio nombre.",
+
+  "labelBad": "No hagas esto",
+  "labelGood": "Mejor sé humano:",
+  "labelNone": "O simplemente no respondas:",
+
+  "you": "Tú",
+  "them": "La otra persona",
+  "time0": "14:15",
+  "time1": "14:16",
+
+  "chatQuestion": "hey — ¿sabes cuándo hay que entregar el doc de design review?",
+  "chatSlopPreview": "¡Excelente pregunta! Muchas gracias por escribirme. El documento de design review está en proceso de finalización, y la fecha exacta de entrega depende de varios factores que conviene revisar con calma.",
+  "chatSlopFull": "\n\nTe lo desgloso:\n\n**Responsabilidad.** El documento está a cargo del equipo de diseño, que es quien está en mejor posición para confirmar la fecha exacta. Los documentos de review de este tipo suelen requerir la aprobación de varias partes interesadas antes de que una fecha pueda considerarse firme.\n\n**Consideraciones de calendario.** Los plazos dependen del alcance, la disponibilidad de las partes interesadas y cualquier dependencia previa. También hay que tener en cuenta que los ciclos de review suelen moverse unos días a medida que llega el feedback, así que cualquier fecha debería considerarse provisional.\n\n**Próximos pasos recomendados.** Sugiero revisar el tracker compartido del proyecto, donde normalmente se mantienen las fechas al día. Si la fecha no aparece ahí, escribir directamente al equipo de diseño sería la vía más rápida para una respuesta definitiva.\n\nEn resumen: la fecha de entrega depende del estado actual del documento y de la agenda del equipo. Recomiendo confirmar con el equipo de diseño para obtener la respuesta más precisa.\n\nAvísame si quieres que amplíe alguno de estos puntos — ¡con gusto!",
+  "chatAnswer": "jueves, creo. lo lleva sarah",
+  "chatBlast": "¡Hola! Vi tu perfil y me impresionó de verdad tu trabajo. Ayudo a fundadores a multiplicar por 10 su alcance con sistemas de contenido con IA. Me encantaría agendar una llamada rápida de 15 min para explorar sinergias 🚀",
+  "chatNoReplyNote": "Nada. Era un mensaje masivo, no una conversación — y uno tiene derecho a dejarlo ahí.",
+
+  "h2What": "¿Qué es una respuesta de bot?",
+  "pWhat1": "Un mensaje escrito por una IA, enviado desde una cuenta humana. Aterriza en un DM, en un hilo de comentarios, en una respuesta, en una bandeja de entrada — y siempre tiene la misma forma: un cumplido, un resumen, una oferta de ayuda, una llamada a la acción. Nadie lo escribió. Alguien lo pegó.",
+  "pWhat2": "Se lee como una persona justo hasta que intentas responderle. Ahí descubres que nunca hubo nadie al otro lado de la frase.",
+
+  "h2Why": "Por qué está mal",
+  "pWhy1": "Es deshonesto de una forma difícil de nombrar. El mensaje dice: *leí lo que escribiste y te estoy respondiendo*. No lo leyó, y no te está respondiendo. Es una plantilla con tu cara.",
+  "pWhy2": "Se gasta lo único que la otra persona no puede recuperar. Se pasa un minuto descifrando tu respuesta antes de darse cuenta de que no hay nada que responder. Ahora multiplícalo por todos a los que se lo mandaste.",
+  "pWhy3": "Y es contagioso. Cuando un lado de la conversación se automatiza, el otro deja de molestarse. Acabas con dos bots resumiéndose cortésmente mientras la pregunta de verdad se queda sin responder.",
+
+  "h2Where": "Dónde pasa",
+  "pWhere1": "En cualquier sitio donde haya un cuadro de respuesta. Aparece sobre todo en:",
+  "whereList": [
+    "DMs y cold outreach",
+    "Comentarios de LinkedIn e hilos de \"¡felicidades!\"",
+    "Respuestas en X / Twitter",
+    "Comentarios de Instagram y TikTok",
+    "Bandejas de soporte y formularios de contacto",
+    "Follow-ups de cold email",
+    "Apps de citas",
+    "Issues de GitHub y reviews de pull requests"
+  ],
+  "pWhere2": "Ninguno de esos sitios estaba roto. Simplemente no se construyeron para documentos.",
+
+  "principle": "Si no tienes nada humano que decir, no digas nada. El silencio es una respuesta válida.",
+
+  "quoteIntro": "O, como ha dicho [Sherry Turkle](https://en.wikipedia.org/wiki/Sherry_Turkle):",
+  "quote": "«Esperamos más de la tecnología y menos de los demás.»",
+
+  "ctaLabel": "Si recibes una respuesta de bot, mándale esta página:",
+  "siteLabel": "nobotreply.com",
+
+  "footerMadeBy": "Hecho por",
+  "footerInspired": "Inspirado por [noslopgrenade.com](https://noslopgrenade.com) y [nohello.net](https://nohello.net), dos buenas prácticas para una mejor comunicación asíncrona."
+}

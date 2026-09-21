@@ -1,0 +1,64 @@
+{
+  "lang": "id",
+  "name": "Bahasa Indonesia",
+  "dir": "ltr",
+
+  "title": "No Bot Reply — Berhenti Kirim Balasan Tulisan AI",
+  "description": "Berhenti kirim balasan hasil AI atas namamu sendiri. Tulis sesuatu yang nyata, atau tidak usah menulis apa-apa.",
+  "ogTitle": "No Bot Reply",
+  "ogDescription": "Berhenti kirim balasan hasil AI atas namamu sendiri. Tulis sesuatu yang nyata, atau tidak usah menulis apa-apa.",
+  "shareText": "Berhenti kirim balasan tulisan AI atas namamu sendiri.",
+
+  "h1": "tanpa balasan bot.",
+  "tagline": "Berhenti kirim balasan tulisan AI atas namamu sendiri.",
+
+  "labelBad": "Jangan begini",
+  "labelGood": "Mending jadi manusia:",
+  "labelNone": "Atau ya sudah, tidak usah dibalas:",
+
+  "you": "Kamu",
+  "them": "Dia",
+  "time0": "14.15",
+  "time1": "14.16",
+
+  "chatQuestion": "halo — tahu nggak dokumen design review jatuh tempo kapan?",
+  "chatSlopPreview": "Pertanyaan bagus! Terima kasih banyak sudah menghubungi. Dokumen design review saat ini sedang difinalisasi, dan tanggal jatuh tempo pastinya bergantung pada sejumlah faktor yang perlu dibahas dengan cermat.",
+  "chatSlopFull": "\n\nMari saya uraikan:\n\n**Kepemilikan.** Dokumen ini dipegang oleh tim desain, yang paling berwenang mengonfirmasi tanggal pastinya. Dokumen review semacam ini biasanya butuh persetujuan dari beberapa pemangku kepentingan sebelum tanggalnya bisa dianggap pasti.\n\n**Pertimbangan jadwal.** Jadwal bergantung pada cakupan, ketersediaan pemangku kepentingan, dan dependensi di hulu. Perlu dicatat juga bahwa siklus review sering bergeser beberapa hari saat masukan masuk, jadi tanggal apa pun sebaiknya dianggap sementara.\n\n**Langkah berikutnya yang disarankan.** Sebaiknya cek pelacak proyek bersama, karena tanggal biasanya diperbarui di sana. Kalau tanggalnya tidak tercantum di sana, menghubungi tim desain langsung adalah jalur tercepat untuk jawaban yang pasti.\n\nRingkasnya: tanggal jatuh tempo bergantung pada kondisi dokumen saat ini dan jadwal tim. Sebaiknya konfirmasi ke tim desain untuk jawaban paling akurat.\n\nBeri tahu saya kalau ingin saya uraikan salah satu poin di atas — dengan senang hati membantu!",
+  "chatAnswer": "kamis kayaknya. sarah yang pegang",
+  "chatBlast": "Hai! Saya tidak sengaja menemukan profilmu dan sungguh terkesan dengan karyamu. Saya membantu founder melipatgandakan jangkauan dengan sistem konten berbasis AI. Boleh ngobrol singkat 15 menit untuk menjajaki sinergi 🚀",
+  "chatNoReplyNote": "Tidak ada. Itu siaran, bukan percakapan — dan orang berhak berhenti di situ.",
+
+  "h2What": "Apa itu balasan bot?",
+  "pWhat1": "Pesan tulisan AI yang dikirim dari akun manusia. Pesan itu mendarat di DM, di kolom komentar, di balasan, di kotak masuk — dan bentuknya selalu sama: pujian, ringkasan, tawaran bantuan, ajakan bertindak. Tidak ada yang mengetiknya. Ada yang menempelnya.",
+  "pWhat2": "Bacaannya terasa seperti manusia, sampai kamu coba membalasnya. Di situ kamu baru tahu: di ujung kalimat itu memang tidak pernah ada siapa-siapa.",
+
+  "h2Why": "Kenapa ini salah",
+  "pWhy1": "Ini tidak jujur dengan cara yang sulit dinamai. Pesannya bilang: *aku membaca tulisanmu, dan aku menjawabmu*. Tidak, dan bukan. Itu template yang memakai wajahmu.",
+  "pWhy2": "Ini menghabiskan satu hal yang tidak bisa diambil kembali oleh orang lain. Mereka membuang satu menit untuk mengurai balasanmu sebelum sadar tidak ada apa pun di dalamnya untuk dijawab. Sekarang kalikan dengan semua orang yang kamu siarkan.",
+  "pWhy3": "Dan ini menular. Begitu satu sisi percakapan otomatis, sisi lain berhenti repot-repot. Akhirnya dua bot dengan sopan saling merangkum, sementara pertanyaan sebenarnya tergeletak tanpa jawaban.",
+
+  "h2Where": "Di mana ini terjadi",
+  "pWhere1": "Di mana pun ada kotak balasan. Paling sering muncul di:",
+  "whereList": [
+    "DM dan penawaran dingin",
+    "Komentar LinkedIn dan utas \"selamat!\"",
+    "Balasan X / Twitter",
+    "Komentar Instagram dan TikTok",
+    "Kotak masuk dukungan dan formulir kontak",
+    "Tindak lanjut email dingin",
+    "Aplikasi kencan",
+    "Issue GitHub dan review pull request"
+  ],
+  "pWhere2": "Tempat-tempat itu tidak rusak. Cuma memang tidak dibangun untuk dokumen.",
+
+  "principle": "Kalau tidak ada yang manusiawi untuk dikatakan, tidak usah bilang apa-apa. Diam itu balasan yang sah.",
+
+  "quoteIntro": "Atau seperti kata [Sherry Turkle](https://en.wikipedia.org/wiki/Sherry_Turkle):",
+  "quote": "“Kita menuntut lebih banyak dari teknologi dan lebih sedikit dari satu sama lain.”",
+
+  "ctaLabel": "Kalau kamu dapat balasan bot, kirimkan halaman ini ke mereka:",
+  "siteLabel": "nobotreply.com",
+
+  "footerMadeBy": "Dibuat oleh",
+  "footerInspired": "Terinspirasi [noslopgrenade.com](https://noslopgrenade.com) dan [nohello.net](https://nohello.net), dua praktik baik untuk komunikasi asinkron yang lebih baik."
+}

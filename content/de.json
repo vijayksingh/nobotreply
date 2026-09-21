@@ -1,0 +1,64 @@
+{
+  "lang": "de",
+  "name": "Deutsch",
+  "dir": "ltr",
+
+  "title": "No Bot Reply — Hör auf, KI-geschriebene Antworten zu verschicken",
+  "description": "Hör auf, KI-generierte Antworten unter deinem eigenen Namen zu verschicken. Schreib etwas Echtes, oder sag gar nichts.",
+  "ogTitle": "No Bot Reply",
+  "ogDescription": "Hör auf, KI-generierte Antworten unter deinem eigenen Namen zu verschicken. Schreib etwas Echtes, oder sag gar nichts.",
+  "shareText": "Hör auf, KI-geschriebene Antworten unter deinem eigenen Namen zu verschicken.",
+
+  "h1": "keine bot-antwort.",
+  "tagline": "Hör auf, KI-geschriebene Antworten unter deinem eigenen Namen zu verschicken.",
+
+  "labelBad": "Mach das nicht",
+  "labelGood": "Sei stattdessen ein Mensch:",
+  "labelNone": "Oder antworte einfach nicht:",
+
+  "you": "Du",
+  "them": "Gegenüber",
+  "time0": "14:15",
+  "time1": "14:16",
+
+  "chatQuestion": "hey — weißt du, wann das design-review-doc fällig ist?",
+  "chatSlopPreview": "Großartige Frage! Vielen Dank für deine Nachricht. Das Design-Review-Dokument wird derzeit finalisiert, und das genaue Fälligkeitsdatum hängt von einer Reihe von Faktoren ab, die sorgfältig durchgegangen werden sollten.",
+  "chatSlopFull": "\n\nLass mich das genauer ausführen:\n\n**Zuständigkeit.** Das Dokument liegt beim Design-Team, das am besten geeignet ist, das genaue Datum zu bestätigen. Review-Dokumente dieser Art erfordern in der Regel die Freigabe durch mehrere Stakeholder, bevor ein Datum als verbindlich gelten kann.\n\n**Zeitplan-Überlegungen.** Zeitpläne hängen vom Umfang, der Verfügbarkeit der Stakeholder und etwaigen vorgelagerten Abhängigkeiten ab. Außerdem ist zu beachten, dass sich Review-Zyklen oft um ein paar Tage verschieben, wenn Feedback eingeht, sodass jedes Datum als vorläufig betrachtet werden sollte.\n\n**Empfohlene nächste Schritte.** Ich würde einen Blick in den gemeinsamen Projekt-Tracker empfehlen, in dem die Termine normalerweise aktuell gehalten werden. Falls das Datum dort nicht steht, wäre der direkteste Weg zu einer verbindlichen Antwort, das Design-Team direkt zu kontaktieren.\n\nZusammenfassung: Das Fälligkeitsdatum hängt vom aktuellen Stand des Dokuments und dem Zeitplan des Teams ab. Am genauesten kann das das Design-Team bestätigen.\n\nSag Bescheid, wenn ich einen dieser Punkte weiter ausführen soll — ich helfe gerne!",
+  "chatAnswer": "donnerstag, glaub ich. sarah ist dran",
+  "chatBlast": "Hi! Ich bin auf dein Profil gestoßen und war ehrlich beeindruckt von deiner Arbeit. Ich helfe Gründern, ihre Reichweite mit KI-gestützten Content-Systemen zu verzehnfachen. Würde mich freuen, in einem kurzen 15-Minuten-Call über Synergien zu sprechen 🚀",
+  "chatNoReplyNote": "Nichts. Das war eine Rundnachricht, kein Gespräch — und man darf es dabei belassen.",
+
+  "h2What": "Was ist eine Bot-Antwort?",
+  "pWhat1": "Eine KI-geschriebene Nachricht, verschickt von einem menschlichen Account. Sie landet in einer DM, unter einem Kommentar, als Antwort, im Postfach — und sie hat jedes Mal dieselbe Form: ein Kompliment, eine Zusammenfassung, ein Hilfsangebot, ein Call to Action. Niemand hat sie getippt. Jemand hat sie eingefügt.",
+  "pWhat2": "Sie liest sich wie ein Mensch — bis du versuchst, etwas zu erwidern. Dann merkst du, dass am anderen Ende des Satzes nie jemand war.",
+
+  "h2Why": "Warum das falsch ist",
+  "pWhy1": "Es ist auf eine Art unehrlich, die man schwer benennen kann. Die Nachricht sagt: *Ich habe gelesen, was du geschrieben hast, und ich antworte dir*. Hat sie nicht, tut sie nicht. Es ist eine Vorlage mit deinem Gesicht.",
+  "pWhy2": "Sie verbraucht das Einzige, was die andere Person nicht zurückbekommt: ihre Zeit. Die Person braucht eine Minute, um deine Antwort zu entziffern, und merkt dann, dass nichts darin steht, worauf man antworten könnte. Und das jetzt mal alle, an die du das verschickt hast.",
+  "pWhy3": "Und es ist ansteckend. Sobald eine Seite eines Gesprächs automatisiert ist, hört die andere auf, sich Mühe zu geben. Am Ende fassen zwei Bots einander höflich zusammen, während die eigentliche Frage unbeantwortet herumsteht.",
+
+  "h2Where": "Wo das passiert",
+  "pWhere1": "Überall, wo es ein Antwortfeld gibt. Am häufigsten hier:",
+  "whereList": [
+    "DMs und Cold Outreach",
+    "LinkedIn-Kommentare und \"Glückwunsch!\"-Threads",
+    "Antworten auf X / Twitter",
+    "Instagram- und TikTok-Kommentare",
+    "Support-Postfächer und Kontaktformulare",
+    "Follow-ups per Kalt-E-Mail",
+    "Dating-Apps",
+    "GitHub-Issues und Pull-Request-Reviews"
+  ],
+  "pWhere2": "Keiner dieser Orte war kaputt. Sie waren nur nicht für Dokumente gebaut.",
+
+  "principle": "Wenn du nichts Menschliches zu sagen hast, sag nichts. Schweigen ist eine gültige Antwort.",
+
+  "quoteIntro": "Oder, wie [Sherry Turkle](https://en.wikipedia.org/wiki/Sherry_Turkle) es formuliert hat:",
+  "quote": "„Wir erwarten mehr von der Technologie und weniger voneinander.“",
+
+  "ctaLabel": "Wenn du eine Bot-Antwort bekommst, schick der Person diese Seite:",
+  "siteLabel": "nobotreply.com",
+
+  "footerMadeBy": "Gemacht von",
+  "footerInspired": "Inspiriert von [noslopgrenade.com](https://noslopgrenade.com) und [nohello.net](https://nohello.net), zwei guten Praktiken für bessere asynchrone Kommunikation."
+}

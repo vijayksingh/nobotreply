@@ -1,0 +1,64 @@
+{
+  "lang": "tr",
+  "name": "Türkçe",
+  "dir": "ltr",
+
+  "title": "No Bot Reply — Yapay Zekâ Yazısı Cevaplar Göndermeyi Bırak",
+  "description": "Yapay zekânın yazdığı cevapları kendi adınla göndermeyi bırak. Gerçek bir şey yaz, ya da hiçbir şey yazma.",
+  "ogTitle": "No Bot Reply",
+  "ogDescription": "Yapay zekânın yazdığı cevapları kendi adınla göndermeyi bırak. Gerçek bir şey yaz, ya da hiçbir şey yazma.",
+  "shareText": "Yapay zekâ yazısı cevapları kendi adınla göndermeyi bırak.",
+
+  "h1": "bot cevabı yok.",
+  "tagline": "Yapay zekâ yazısı cevapları kendi adınla göndermeyi bırak.",
+
+  "labelBad": "Bunu yapma",
+  "labelGood": "Onun yerine insan ol:",
+  "labelNone": "Ya da hiç cevap verme:",
+
+  "you": "Sen",
+  "them": "Onlar",
+  "time0": "14:15",
+  "time1": "14:16",
+
+  "chatQuestion": "selam — tasarım inceleme dokümanının teslim tarihi belli mi?",
+  "chatSlopPreview": "Harika bir soru! Ulaştığın için çok teşekkürler. Tasarım inceleme dokümanı şu anda son haline getiriliyor ve kesin teslim tarihi, dikkatle ele alınması gereken bir dizi faktöre bağlı.",
+  "chatSlopFull": "\n\nMaddelere ayırayım:\n\n**Sahiplik.** Doküman, kesin tarihi en iyi teyit edebilecek konumda olan tasarım ekibine ait. Bu tür inceleme dokümanları, bir tarihin kesin sayılabilmesi için genellikle birkaç paydaşın onayını gerektirir.\n\n**Takvim değerlendirmeleri.** Takvimler kapsama, paydaşların müsaitliğine ve olası önceki bağımlılıklara bağlıdır. Ayrıca inceleme döngülerinin geri bildirim geldikçe birkaç gün kayabildiğini belirtmekte fayda var; yani herhangi bir tarih geçici kabul edilmelidir.\n\n**Önerilen sonraki adımlar.** Ortak proje takipçisine bakmanı öneririm; tarihler genelde orada güncel tutulur. Tarih orada yazmıyorsa, kesin cevaba ulaşmanın en hızlı yolu doğrudan tasarım ekibine ulaşmaktır.\n\nÖzetle: teslim tarihi dokümanın mevcut durumuna ve ekibin programına bağlı. En doğru cevap için tasarım ekibiyle teyit etmeni öneririm.\n\nBu noktalardan birini daha ayrıntılı açmamı istersen söyle — memnuniyetle yardımcı olurum!",
+  "chatAnswer": "perşembe galiba. sarah bakıyor",
+  "chatBlast": "Merhaba! Profiline denk geldim ve işine gerçekten hayran kaldım. Kurucuların erişimini yapay zekâ destekli içerik sistemleriyle 10 katına çıkarmalarına yardımcı oluyorum. Sinerjileri konuşmak için 15 dakikalık kısa bir görüşme yapabilir miyiz 🚀",
+  "chatNoReplyNote": "Hiçbir şey. O bir sohbet değil, duyuruydu — ve insan onu orada bırakmakta özgür.",
+
+  "h2What": "Bot cevabı nedir?",
+  "pWhat1": "İnsan hesabından gönderilen, yapay zekâ yazısı bir mesaj. DM'e, yorum dizisine, bir cevaba, bir gelen kutusuna düşer — ve her seferinde aynı şekle sahiptir: bir iltifat, bir özet, bir yardım teklifi, bir harekete geçme çağrısı. Kimse yazmadı. Birisi yapıştırdı.",
+  "pWhat2": "Karşılık vermeyi deneyene kadar insan gibi okunur. Sonra anlarsın: o cümlenin öbür ucunda hiç kimse yoktu.",
+
+  "h2Why": "Neden yanlış",
+  "pWhy1": "Adını koyması zor bir sahtekârlık. Mesaj şunu söylüyor: *yazdığını okudum ve sana cevap veriyorum*. Okumadı, vermiyor da. Senin yüzünü takmış bir şablon.",
+  "pWhy2": "Karşıdaki kişinin geri alamayacağı tek şeyi harcıyor. Senin cevabını çözümlemek için bir dakikasını yakıyor, sonra içinde cevaplanacak bir şey olmadığını fark ediyor. Şimdi bunu mesaj attığın herkesle çarp.",
+  "pWhy3": "Üstelik bulaşıcı. Bir sohbetin bir tarafı otomatikleştiğinde, diğer taraf uğraşmayı bırakıyor. Sonunda iki bot birbirini kibarca özetlerken asıl soru orada cevapsız kalıyor.",
+
+  "h2Where": "Nerede oluyor",
+  "pWhere1": "Cevap kutusu olan her yerde. En çok şuralarda:",
+  "whereList": [
+    "DM'ler ve soğuk erişim",
+    "LinkedIn yorumları ve \"tebrikler!\" dizileri",
+    "X / Twitter cevapları",
+    "Instagram ve TikTok yorumları",
+    "Destek gelen kutuları ve iletişim formları",
+    "Soğuk e-posta takipleri",
+    "Flört uygulamaları",
+    "GitHub issue'ları ve pull request incelemeleri"
+  ],
+  "pWhere2": "O yerlerin hiçbiri bozuk değildi. Sadece doküman için tasarlanmamışlardı.",
+
+  "principle": "Söyleyecek insani bir şeyin yoksa, hiçbir şey söyleme. Sessizlik geçerli bir cevaptır.",
+
+  "quoteIntro": "Ya da [Sherry Turkle](https://en.wikipedia.org/wiki/Sherry_Turkle)'ın dediği gibi:",
+  "quote": "“Teknolojiden daha fazlasını, birbirimizden daha azını bekliyoruz.”",
+
+  "ctaLabel": "Bot cevabı alırsan, ona bu sayfayı gönder:",
+  "siteLabel": "nobotreply.com",
+
+  "footerMadeBy": "Yapan:",
+  "footerInspired": "[noslopgrenade.com](https://noslopgrenade.com) ve [nohello.net](https://nohello.net)'ten esinlendi — daha iyi asenkron iletişim için iki iyi pratik."
+}

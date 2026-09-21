@@ -1,0 +1,48 @@
+name: ci
+
+# Fast, deterministic checks on every push and pull request. No browser, no
+# network, no secrets — the whole suite is pure Node and runs in seconds.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: build & verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build (strict — fails on a missing or malformed translation)
+        run: STRICT=1 node build.mjs
+
+      - name: Verify every generated page
+        run: node tools/verify.mjs
+
+      - name: Report payload
+        run: |
+          echo "### Payload" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          for f in dist/index.html dist/ja/index.html dist/ar/index.html; do
+            printf '%-22s raw %6s B   gzip %5s B\n' "$f" "$(wc -c <"$f")" "$(gzip -9c "$f" | wc -c)" >> "$GITHUB_STEP_SUMMARY"
+          done
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+          retention-days: 7

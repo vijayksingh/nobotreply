@@ -1,0 +1,70 @@
+name: deploy
+
+# Ships to Cloudflare Pages (project `nobotreply`) → https://nobotreply.com
+#
+# Triggers
+#   push to main          automatic deploy of every merged change
+#   push of a v* tag      re-deploy on demand, e.g. `git tag v1.0.1 && git push origin v1.0.1`
+#   workflow_dispatch     the "Run workflow" button in the Actions tab
+#
+# Every path re-runs the strict build and the full verifier before uploading, so
+# a broken translation or a broken internal link cannot reach production.
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Why are you re-deploying? (shown in the run summary)'
+        required: false
+        default: 'manual re-deploy'
+
+permissions:
+  contents: read
+  deployments: write
+
+# Never let two production deploys race; queue them instead of cancelling.
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: build, verify & deploy
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://nobotreply.com
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build (strict)
+        run: STRICT=1 node build.mjs
+
+      - name: Verify every generated page
+        run: node tools/verify.mjs
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # --branch main is what makes this a *production* deployment; anything
+          # else would land as a preview URL instead of nobotreply.com.
+          command: pages deploy dist --project-name=nobotreply --branch=main
+
+      - name: Summary
+        run: |
+          {
+            echo "### Deployed"
+            echo ""
+            echo "- **ref:** \`${{ github.ref_name }}\` (${{ github.event_name }})"
+            echo "- **commit:** \`${{ github.sha }}\`"
+            echo "- **url:** https://nobotreply.com"
+            if [ -n "${{ inputs.reason }}" ]; then echo "- **reason:** ${{ inputs.reason }}"; fi
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,22 @@
+{
+  "name": "nobotreply",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "no bot reply — stop sending AI-written replies under your own name. 18 languages, zero dependencies, zero requests.",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:strict": "STRICT=1 node build.mjs",
+    "verify": "node tools/verify.mjs",
+    "check": "npm run build:strict && npm run verify",
+    "og": "python3 tools/make-og.py",
+    "serve": "node build.mjs && python3 -m http.server 8080 --directory dist",
+    "audit": "npx --yes lighthouse@12 http://localhost:8080/ --chrome-flags=\"--headless --no-sandbox\" --quiet"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
+  }
+}

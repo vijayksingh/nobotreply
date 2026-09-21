@@ -1,0 +1,64 @@
+{
+  "lang": "fr",
+  "name": "Français",
+  "dir": "ltr",
+
+  "title": "No Bot Reply — Arrêtez d’envoyer des réponses écrites par IA",
+  "description": "Arrêtez d’envoyer des réponses générées par IA sous votre propre nom. Écrivez quelque chose de vrai, ou ne dites rien.",
+  "ogTitle": "No Bot Reply",
+  "ogDescription": "Arrêtez d’envoyer des réponses générées par IA sous votre propre nom. Écrivez quelque chose de vrai, ou ne dites rien.",
+  "shareText": "Arrêtez d’envoyer des réponses écrites par IA sous votre propre nom.",
+
+  "h1": "pas de réponse de bot.",
+  "tagline": "Arrêtez d’envoyer des réponses écrites par IA sous votre propre nom.",
+
+  "labelBad": "Ne faites pas ça",
+  "labelGood": "À la place, soyez humain :",
+  "labelNone": "Ou ne répondez pas :",
+
+  "you": "Vous",
+  "them": "L’autre",
+  "time0": "14:15",
+  "time1": "14:16",
+
+  "chatQuestion": "hey — tu sais quand le doc de design review doit être rendu ?",
+  "chatSlopPreview": "Excellente question ! Merci beaucoup de m’avoir écrit. Le document de design review est en cours de finalisation, et la date exacte dépend d’un certain nombre de facteurs qu’il vaut la peine d’examiner attentivement.",
+  "chatSlopFull": "\n\nJe détaille :\n\n**Qui s’en occupe.** Le document est géré par l’équipe design, la mieux placée pour confirmer la date exacte. Ce type de document de review nécessite généralement la validation de plusieurs parties prenantes avant qu’une date puisse être considérée comme ferme.\n\n**Contraintes de calendrier.** Les délais dépendent du périmètre, de la disponibilité des parties prenantes et d’éventuelles dépendances en amont. Il faut aussi noter que les cycles de review glissent souvent de quelques jours à mesure que les retours arrivent, donc toute date doit être considérée comme provisoire.\n\n**Prochaines étapes recommandées.** Je suggère de consulter le tracker de projet partagé, où les dates sont normalement tenues à jour. Si la date n’y figure pas, contacter directement l’équipe design serait le chemin le plus rapide vers une réponse définitive.\n\nEn résumé : la date dépend de l’état actuel du document et du planning de l’équipe. Je recommande de confirmer auprès de l’équipe design pour obtenir la réponse la plus précise.\n\nDites-moi si vous voulez que je développe l’un de ces points — avec plaisir !",
+  "chatAnswer": "jeudi, je crois. c’est sarah qui gère",
+  "chatBlast": "Bonjour ! Je suis tombé sur votre profil et j’ai été sincèrement impressionné par votre travail. J’aide les fondateurs à décupler leur portée avec des systèmes de contenu propulsés par l’IA. J’adorerais un petit appel de 15 min pour explorer les synergies 🚀",
+  "chatNoReplyNote": "Rien. C’était une diffusion, pas une conversation — et on a le droit d’en rester là.",
+
+  "h2What": "C’est quoi, une réponse de bot ?",
+  "pWhat1": "Un message écrit par une IA, envoyé depuis un compte humain. Il atterrit dans un DM, un fil de commentaires, une réponse, une boîte mail — et il a toujours la même forme : un compliment, un résumé, une proposition d’aide, un appel à l’action. Personne ne l’a tapé. Quelqu’un l’a collé.",
+  "pWhat2": "Ça se lit comme un humain, jusqu’au moment où vous essayez de répondre. Là, vous découvrez qu’il n’y a jamais eu personne à l’autre bout de la phrase.",
+
+  "h2Why": "Pourquoi c’est un problème",
+  "pWhy1": "C’est malhonnête d’une façon difficile à nommer. Le message dit : *j’ai lu ce que vous avez écrit, et je vous réponds*. Il ne l’a pas lu, et il ne vous répond pas. C’est un gabarit qui porte votre visage.",
+  "pWhy2": "Ça dépense la seule chose que l’autre ne récupérera jamais. La personne perd une minute à décoder votre réponse avant de comprendre qu’il n’y a rien à y répondre. Multipliez maintenant par toutes celles que vous arrosez.",
+  "pWhy3": "Et c’est contagieux. Dès qu’un côté de la conversation est automatisé, l’autre arrête de faire l’effort. Résultat : deux bots qui se résument poliment pendant que la vraie question reste sans réponse.",
+
+  "h2Where": "Où ça arrive",
+  "pWhere1": "Partout où il y a une zone de réponse. On le voit surtout dans :",
+  "whereList": [
+    "Les DM et le cold outreach",
+    "Les commentaires LinkedIn et les fils « félicitations ! »",
+    "Les réponses sur X / Twitter",
+    "Les commentaires Instagram et TikTok",
+    "Les boîtes support et les formulaires de contact",
+    "Les relances par cold email",
+    "Les applis de rencontre",
+    "Les issues GitHub et les reviews de pull requests"
+  ],
+  "pWhere2": "Aucun de ces endroits n’était cassé. Ils n’étaient juste pas conçus pour des documents.",
+
+  "principle": "Si vous n’avez rien d’humain à dire, ne dites rien. Le silence est une réponse valable.",
+
+  "quoteIntro": "Ou, comme l’a dit [Sherry Turkle](https://en.wikipedia.org/wiki/Sherry_Turkle) :",
+  "quote": "« Nous attendons plus de la technologie et moins les uns des autres. »",
+
+  "ctaLabel": "Si vous recevez une réponse de bot, envoyez cette page à la personne :",
+  "siteLabel": "nobotreply.com",
+
+  "footerMadeBy": "Fait par",
+  "footerInspired": "Inspiré par [noslopgrenade.com](https://noslopgrenade.com) et [nohello.net](https://nohello.net), deux bonnes pratiques pour une meilleure communication asynchrone."
+}

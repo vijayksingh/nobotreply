@@ -1,0 +1,64 @@
+{
+  "lang": "pl",
+  "name": "Polski",
+  "dir": "ltr",
+
+  "title": "No Bot Reply — Przestań wysyłać odpowiedzi pisane przez AI",
+  "description": "Przestań wysyłać odpowiedzi generowane przez AI pod własnym nazwiskiem. Napisz coś prawdziwego albo nie pisz nic.",
+  "ogTitle": "No Bot Reply",
+  "ogDescription": "Przestań wysyłać odpowiedzi generowane przez AI pod własnym nazwiskiem. Napisz coś prawdziwego albo nie pisz nic.",
+  "shareText": "Przestań wysyłać odpowiedzi pisane przez AI pod własnym nazwiskiem.",
+
+  "h1": "koniec z botami.",
+  "tagline": "Przestań wysyłać odpowiedzi pisane przez AI pod własnym nazwiskiem.",
+
+  "labelBad": "Nie rób tego",
+  "labelGood": "Zamiast tego bądź człowiekiem:",
+  "labelNone": "Albo po prostu nie odpowiadaj:",
+
+  "you": "Ty",
+  "them": "Oni",
+  "time0": "14:15",
+  "time1": "14:16",
+
+  "chatQuestion": "hej — wiesz może, kiedy trzeba oddać doc z design review?",
+  "chatSlopPreview": "Świetne pytanie! Dziękuję bardzo za wiadomość. Dokument z design review jest właśnie finalizowany, a dokładny termin zależy od szeregu czynników, które warto spokojnie omówić.",
+  "chatSlopFull": "\n\nPozwól, że rozłożę to na części:\n\n**Właściciel.** Dokument należy do zespołu designu, który najlepiej potrafi potwierdzić dokładną datę. Dokumenty przeglądowe tego typu wymagają zwykle akceptacji kilku interesariuszy, zanim datę można uznać za wiążącą.\n\n**Kwestie harmonogramu.** Terminy zależą od zakresu, dostępności interesariuszy i wszelkich zależności powyżej. Warto też zauważyć, że cykle przeglądu często przesuwają się o kilka dni, gdy spływają uwagi, więc każdą datę należy traktować jako wstępną.\n\n**Zalecane kolejne kroki.** Sugeruję sprawdzić wspólny tracker projektu, w którym daty są zwykle trzymane na bieżąco. Jeśli daty tam nie ma, najszybszą drogą do konkretnej odpowiedzi będzie bezpośredni kontakt z zespołem designu.\n\nPodsumowując: termin zależy od aktualnego stanu dokumentu i harmonogramu zespołu. Zalecam potwierdzenie u zespołu designu, żeby odpowiedź była jak najdokładniejsza.\n\nDaj znać, jeśli chcesz, żebym rozwinął któryś z tych punktów — chętnie pomogę!",
+  "chatAnswer": "czwartek, chyba. sarah to ogarnia",
+  "chatBlast": "Cześć! Trafiłem na twój profil i twoja praca naprawdę zrobiła na mnie wrażenie. Pomagam founderom 10x zwiększyć zasięgi dzięki systemom contentowym opartym na AI. Chętnie pogadam 15 minut na szybkiej rozmowie o synergiach 🚀",
+  "chatNoReplyNote": "Nic. To był broadcast, nie rozmowa — a człowiek ma prawo zostawić to bez odpowiedzi.",
+
+  "h2What": "Czym jest odpowiedź bota?",
+  "pWhat1": "Wiadomość napisana przez AI i wysłana z ludzkiego konta. Ląduje w DM-ie, w wątku komentarzy, w odpowiedzi, w skrzynce — i zawsze ma ten sam kształt: komplement, streszczenie, propozycja pomocy, wezwanie do działania. Nikt tego nie napisał. Ktoś to wkleił.",
+  "pWhat2": "Czyta się jak człowiek, dopóki nie spróbujesz odpowiedzieć. Wtedy okazuje się, że po drugiej stronie zdania nigdy nikogo nie było.",
+
+  "h2Why": "Dlaczego to jest złe",
+  "pWhy1": "To nieuczciwe w sposób, który trudno nazwać. Wiadomość mówi: *przeczytałem, co napisałeś, i odpowiadam ci*. Nie przeczytała i nie odpowiada. To szablon z twoją twarzą.",
+  "pWhy2": "Zużywa jedyną rzecz, której druga osoba nie odzyska: czas. Traci minutę na rozgryzanie twojej odpowiedzi, zanim zrozumie, że nie ma w niej na co odpowiedzieć. A teraz pomnóż to przez wszystkich, do których wysłałeś masówkę.",
+  "pWhy3": "I to się roznosi. Gdy jedna strona rozmowy jest zautomatyzowana, druga przestaje się wysilać. Zostają dwa boty, które uprzejmie się streszczają, a prawdziwe pytanie leży bez odpowiedzi.",
+
+  "h2Where": "Gdzie to się dzieje",
+  "pWhere1": "Wszędzie, gdzie jest pole na odpowiedź. Najczęściej w:",
+  "whereList": [
+    "DM-y i cold outreach",
+    "Komentarze na LinkedInie i wątki \"gratulacje!\"",
+    "Odpowiedzi na X / Twitterze",
+    "Komentarze na Instagramie i TikToku",
+    "Skrzynki wsparcia i formularze kontaktowe",
+    "Follow-upy w cold mailach",
+    "Aplikacje randkowe",
+    "Issues na GitHubie i review pull requestów"
+  ],
+  "pWhere2": "Żadne z tych miejsc nie było zepsute. Po prostu nie zostały zbudowane pod dokumenty.",
+
+  "principle": "Jeśli nie masz nic ludzkiego do powiedzenia, nie mów nic. Milczenie to pełnoprawna odpowiedź.",
+
+  "quoteIntro": "Albo, jak powiedziała [Sherry Turkle](https://en.wikipedia.org/wiki/Sherry_Turkle):",
+  "quote": "„Oczekujemy więcej od technologii, a mniej od siebie nawzajem.”",
+
+  "ctaLabel": "Jeśli dostaniesz odpowiedź od bota, wyślij mu tę stronę:",
+  "siteLabel": "nobotreply.com",
+
+  "footerMadeBy": "Zrobił",
+  "footerInspired": "Inspirowane [noslopgrenade.com](https://noslopgrenade.com) i [nohello.net](https://nohello.net) — dwiema dobrymi praktykami lepszej komunikacji asynchronicznej."
+}

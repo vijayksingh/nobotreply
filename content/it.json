@@ -1,0 +1,64 @@
+{
+  "lang": "it",
+  "name": "Italiano",
+  "dir": "ltr",
+
+  "title": "No Bot Reply — Smetti di inviare risposte scritte dall'AI",
+  "description": "Smetti di inviare risposte generate dall'AI a nome tuo. Scrivi qualcosa di vero, o non scrivere niente.",
+  "ogTitle": "No Bot Reply",
+  "ogDescription": "Smetti di inviare risposte generate dall'AI a nome tuo. Scrivi qualcosa di vero, o non scrivere niente.",
+  "shareText": "Smetti di inviare risposte scritte dall'AI a nome tuo.",
+
+  "h1": "no risposte bot.",
+  "tagline": "Smetti di inviare risposte scritte dall'AI a nome tuo.",
+
+  "labelBad": "Non farlo",
+  "labelGood": "Invece, sii umano:",
+  "labelNone": "Oppure non rispondere:",
+
+  "you": "Tu",
+  "them": "Loro",
+  "time0": "14:15",
+  "time1": "14:16",
+
+  "chatQuestion": "ehi — hai idea di quando va consegnato il doc della design review?",
+  "chatSlopPreview": "Ottima domanda! Grazie mille per aver scritto. Il documento di design review è in fase di finalizzazione, e la data esatta dipende da una serie di fattori che vale la pena esaminare con attenzione.",
+  "chatSlopFull": "\n\nVediamo nel dettaglio:\n\n**Proprietà.** Il documento è di competenza del team di design, che è nella posizione migliore per confermare la data esatta. I documenti di review di questo tipo richiedono in genere l'approvazione di diversi stakeholder prima che una data possa essere considerata definitiva.\n\n**Considerazioni sulle tempistiche.** Le tempistiche dipendono dallo scope, dalla disponibilità degli stakeholder e da eventuali dipendenze a monte. Vale anche la pena notare che i cicli di review slittano spesso di qualche giorno man mano che arrivano i feedback, quindi qualsiasi data va considerata provvisoria.\n\n**Prossimi passi consigliati.** Suggerirei di controllare il tracker condiviso del progetto, dove di solito le date vengono tenute aggiornate. Se la data non è indicata lì, contattare direttamente il team di design sarebbe la via più rapida per una risposta definitiva.\n\nIn sintesi: la data di consegna dipende dallo stato attuale del documento e dall'agenda del team. Consiglio di confermare con il team di design per la risposta più accurata.\n\nFammi sapere se vuoi che approfondisca qualcuno di questi punti — felice di aiutarti!",
+  "chatAnswer": "giovedi, credo. se ne occupa sarah",
+  "chatBlast": "Ciao! Ho visto il tuo profilo e il tuo lavoro mi ha davvero colpito. Aiuto i founder a moltiplicare per 10 il loro reach con sistemi di contenuti basati sull'AI. Mi piacerebbe fare una call veloce di 15 minuti per esplorare le sinergie 🚀",
+  "chatNoReplyNote": "Niente. Era una trasmissione, non una conversazione — e uno ha tutto il diritto di lasciarla lì.",
+
+  "h2What": "Cos'è una risposta bot?",
+  "pWhat1": "Un messaggio scritto dall'AI e inviato da un account umano. Arriva in un DM, in un thread di commenti, in una risposta, in una inbox — e ha sempre la stessa forma: un complimento, un riassunto, un'offerta di aiuto, una call to action. Nessuno l'ha scritto. Qualcuno l'ha incollato.",
+  "pWhat2": "Sembra una persona, finché non provi a rispondere. E lì scopri che dall'altra parte della frase non c'è mai stato nessuno.",
+
+  "h2Why": "Perché è sbagliato",
+  "pWhy1": "È disonesto in un modo difficile da definire. Il messaggio dice *ho letto quello che hai scritto, e ti sto rispondendo*. Non l'ha letto, e non ti sta rispondendo. È un template con la tua faccia.",
+  "pWhy2": "Spreca l'unica cosa che l'altra persona non può riavere: il tempo. Brucia un minuto a decifrare la tua risposta, prima di capire che non c'è niente a cui rispondere. Adesso moltiplicalo per tutti quelli a cui hai scritto in massa.",
+  "pWhy3": "Ed è contagioso. Quando un lato della conversazione è automatizzato, l'altro smette di sbattersi. Ti ritrovi due bot che si riassumono a vicenda con educazione, mentre la domanda vera resta lì senza risposta.",
+
+  "h2Where": "Dove succede",
+  "pWhere1": "Ovunque ci sia una casella per rispondere. Si vede soprattutto in:",
+  "whereList": [
+    "DM e outreach a freddo",
+    "Commenti su LinkedIn e thread di \"congratulazioni!\"",
+    "Risposte su X / Twitter",
+    "Commenti su Instagram e TikTok",
+    "Inbox di supporto e form di contatto",
+    "Follow-up di email a freddo",
+    "App di dating",
+    "Issue su GitHub e review delle pull request"
+  ],
+  "pWhere2": "Nessuno di questi posti era rotto. Semplicemente non sono stati costruiti per i documenti.",
+
+  "principle": "Se non hai niente di umano da dire, non dire niente. Il silenzio è una risposta valida.",
+
+  "quoteIntro": "O come ha detto [Sherry Turkle](https://en.wikipedia.org/wiki/Sherry_Turkle):",
+  "quote": "«Ci aspettiamo di più dalla tecnologia e di meno gli uni dagli altri.»",
+
+  "ctaLabel": "Se ricevi una risposta bot, mandagli questa pagina:",
+  "siteLabel": "nobotreply.com",
+
+  "footerMadeBy": "Fatto da",
+  "footerInspired": "Ispirato a [noslopgrenade.com](https://noslopgrenade.com) e [nohello.net](https://nohello.net), due buone pratiche per una comunicazione asincrona migliore."
+}

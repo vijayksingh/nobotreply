@@ -1,0 +1,64 @@
+{
+  "lang": "nl",
+  "name": "Nederlands",
+  "dir": "ltr",
+
+  "title": "No Bot Reply — Stop met het sturen van AI-geschreven reacties",
+  "description": "Stop met het sturen van AI-gegenereerde reacties onder je eigen naam. Schrijf iets echts, of zeg helemaal niets.",
+  "ogTitle": "No Bot Reply",
+  "ogDescription": "Stop met het sturen van AI-gegenereerde reacties onder je eigen naam. Schrijf iets echts, of zeg helemaal niets.",
+  "shareText": "Stop met het sturen van AI-geschreven reacties onder je eigen naam.",
+
+  "h1": "geen botreply.",
+  "tagline": "Stop met het sturen van AI-geschreven reacties onder je eigen naam.",
+
+  "labelBad": "Doe dit niet",
+  "labelGood": "Wees gewoon menselijk:",
+  "labelNone": "Of antwoord gewoon niet:",
+
+  "you": "Jij",
+  "them": "Zij",
+  "time0": "14:15",
+  "time1": "14:16",
+
+  "chatQuestion": "hey — enig idee wanneer het designreview-doc klaar moet zijn?",
+  "chatSlopPreview": "Goede vraag! Bedankt dat je contact opneemt. Het designreview-document wordt momenteel afgerond, en de exacte deadline hangt af van een aantal factoren die we zorgvuldig moeten doorlopen.",
+  "chatSlopFull": "\n\nLaat me het even uiteenzetten:\n\n**Eigenaarschap.** Het document valt onder het designteam, dat het beste kan bevestigen wat de exacte datum is. Dit soort reviewdocumenten vereist doorgaans goedkeuring van meerdere stakeholders voordat een datum als definitief kan gelden.\n\n**Overwegingen rond de planning.** Planningen hangen af van de scope, de beschikbaarheid van stakeholders en eventuele afhankelijkheden eerder in het proces. Het is ook goed om te weten dat reviewcycli vaak een paar dagen opschuiven zodra er feedback binnenkomt, dus elke datum moet als voorlopig worden beschouwd.\n\n**Aanbevolen volgende stappen.** Ik zou de gedeelde projecttracker checken, waar datums meestal actueel worden gehouden. Staat de datum daar niet in, dan is het direct benaderen van het designteam de snelste weg naar een definitief antwoord.\n\nSamengevat: de deadline hangt af van de huidige staat van het document en de planning van het team. Ik raad aan om het bij het designteam te bevestigen voor het meest accurate antwoord.\n\nLaat me weten of je wilt dat ik dieper op een van deze punten inga — ik help je graag!",
+  "chatAnswer": "donderdag, geloof ik. sarah gaat erover",
+  "chatBlast": "Hoi! Ik kwam je profiel tegen en was echt onder de indruk van je werk. Ik help founders hun bereik te vertienvoudigen met AI-gedreven contentsystemen. Lijkt het je wat om even 15 minuten te bellen om de synergieën te verkennen 🚀",
+  "chatNoReplyNote": "Niets. Het was een uitzending, geen gesprek — en je mag het daarbij laten.",
+
+  "h2What": "Wat is een botreactie?",
+  "pWhat1": "Een AI-geschreven bericht dat vanaf een menselijk account wordt verstuurd. Het belandt in een DM, een commentthread, een reactie, een inbox — en het heeft elke keer dezelfde vorm: een compliment, een samenvatting, een aanbod om te helpen, een call to action. Niemand heeft het getypt. Iemand heeft het geplakt.",
+  "pWhat2": "Het leest als een mens, tot je iets terug probeert te zeggen. Dan ontdek je dat er nooit iemand aan de andere kant van die zin stond.",
+
+  "h2Why": "Waarom het fout is",
+  "pWhy1": "Het is oneerlijk op een manier die lastig te benoemen is. Het bericht zegt *ik heb gelezen wat je schreef, en ik reageer op jou*. Dat heeft het niet, en dat doet het niet. Het is een template met jouw gezicht erop.",
+  "pWhy2": "Het vreet het enige op dat de ander niet terugkrijgt: tijd. Die persoon is een minuut bezig je reactie te ontleden, voordat hij doorheeft dat er niets in staat om op te antwoorden. Vermenigvuldig dat nu met iedereen die je hebt toegesproken.",
+  "pWhy3": "En het is besmettelijk. Zodra één kant van een gesprek geautomatiseerd is, haakt de andere kant af. Dan heb je twee bots die elkaar beleefd samenvatten, terwijl de echte vraag onbeantwoord blijft liggen.",
+
+  "h2Where": "Waar het gebeurt",
+  "pWhere1": "Overal waar een antwoordvak staat. Je ziet het vooral in:",
+  "whereList": [
+    "DM's en koude outreach",
+    "LinkedIn-reacties en \"gefeliciteerd!\"-threads",
+    "Reacties op X / Twitter",
+    "Reacties op Instagram en TikTok",
+    "Support-inboxen en contactformulieren",
+    "Follow-ups van koude e-mails",
+    "Datingapps",
+    "GitHub-issues en pull request-reviews"
+  ],
+  "pWhere2": "Geen van die plekken was kapot. Ze zijn alleen niet gebouwd voor documenten.",
+
+  "principle": "Als je niets menselijks te zeggen hebt, zeg dan niets. Stilte is een geldig antwoord.",
+
+  "quoteIntro": "Of zoals [Sherry Turkle](https://en.wikipedia.org/wiki/Sherry_Turkle) het zei:",
+  "quote": "„We verwachten meer van technologie en minder van elkaar.”",
+
+  "ctaLabel": "Krijg je een botreactie, stuur ze dan deze pagina:",
+  "siteLabel": "nobotreply.com",
+
+  "footerMadeBy": "Gemaakt door",
+  "footerInspired": "Geïnspireerd door [noslopgrenade.com](https://noslopgrenade.com) en [nohello.net](https://nohello.net), twee goede practices voor betere asynchrone communicatie."
+}

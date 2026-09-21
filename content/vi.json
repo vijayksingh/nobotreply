@@ -1,0 +1,64 @@
+{
+  "lang": "vi",
+  "name": "Tiếng Việt",
+  "dir": "ltr",
+
+  "title": "No Bot Reply — Đừng Gửi Những Câu Trả Lời Do AI Viết",
+  "description": "Đừng gửi những câu trả lời do AI viết dưới tên của chính bạn. Viết một cái gì đó thật, hoặc không nói gì cả.",
+  "ogTitle": "No Bot Reply",
+  "ogDescription": "Đừng gửi những câu trả lời do AI viết dưới tên của chính bạn. Viết một cái gì đó thật, hoặc không nói gì cả.",
+  "shareText": "Đừng gửi những câu trả lời do AI viết dưới tên của chính bạn.",
+
+  "h1": "đừng để bot trả lời.",
+  "tagline": "Đừng gửi những câu trả lời do AI viết dưới tên của chính bạn.",
+
+  "labelBad": "Đừng làm thế",
+  "labelGood": "Thay vào đó, hãy là người:",
+  "labelNone": "Hoặc đơn giản là không trả lời:",
+
+  "you": "Bạn",
+  "them": "Họ",
+  "time0": "14:15",
+  "time1": "14:16",
+
+  "chatQuestion": "này — có biết khi nào tài liệu review thiết kế đến hạn không?",
+  "chatSlopPreview": "Câu hỏi hay đấy! Cảm ơn bạn đã liên hệ. Tài liệu review thiết kế hiện đang được hoàn thiện, và ngày đến hạn chính xác phụ thuộc vào một số yếu tố cần được xem xét kỹ lưỡng.",
+  "chatSlopFull": "\n\nĐể tôi phân tích:\n\n**Ai phụ trách.** Tài liệu do nhóm thiết kế phụ trách, và họ là người phù hợp nhất để xác nhận ngày chính xác. Những tài liệu review kiểu này thường cần nhiều bên liên quan phê duyệt trước khi một ngày cụ thể được coi là chắc chắn.\n\n**Về tiến độ.** Tiến độ phụ thuộc vào phạm vi, lịch rảnh của các bên liên quan và các phụ thuộc ở đầu vào. Cũng nên lưu ý rằng chu kỳ review thường dịch vài ngày khi phản hồi về, nên mọi mốc thời gian chỉ nên coi là tạm thời.\n\n**Bước tiếp theo nên làm.** Tôi khuyên bạn kiểm tra bảng theo dõi dự án chung, vì ngày thường được cập nhật ở đó. Nếu không thấy ngày trong đó, liên hệ trực tiếp với nhóm thiết kế sẽ là cách nhanh nhất để có câu trả lời dứt khoát.\n\nTóm lại: ngày đến hạn phụ thuộc vào tình trạng hiện tại của tài liệu và lịch của nhóm. Tôi khuyên bạn xác nhận với nhóm thiết kế để có câu trả lời chính xác nhất.\n\nCho tôi biết nếu bạn muốn tôi nói rõ thêm điểm nào — rất sẵn lòng giúp!",
+  "chatAnswer": "thứ năm chắc vậy. sarah lo",
+  "chatBlast": "Chào bạn! Tôi tình cờ thấy hồ sơ của bạn và thật sự ấn tượng với công việc của bạn. Tôi giúp các founder tăng gấp 10 lần độ phủ bằng hệ thống nội dung dùng AI. Rất mong có một cuộc gọi nhanh 15 phút để bàn về synergy 🚀",
+  "chatNoReplyNote": "Không gì cả. Đó là một tin phát chung, không phải một cuộc trò chuyện — và người ta có quyền dừng ở đó.",
+
+  "h2What": "Bot trả lời là gì?",
+  "pWhat1": "Một tin nhắn do AI viết nhưng gửi từ tài khoản người thật. Nó rơi vào DM, vào một luồng bình luận, một câu trả lời, một hộp thư — và lần nào cũng cùng một dạng: một lời khen, một bản tóm tắt, một lời đề nghị giúp đỡ, một lời kêu gọi hành động. Không ai gõ nó. Có người dán nó vào.",
+  "pWhat2": "Nó đọc lên cứ như người thật, cho tới khi bạn thử đáp lại. Lúc đó bạn mới biết ở đầu bên kia câu nói chưa từng có ai.",
+
+  "h2Why": "Vì sao nó sai",
+  "pWhy1": "Nó không trung thực theo một kiểu khó gọi tên. Tin nhắn nói rằng: *tôi đã đọc điều bạn viết, và tôi đang trả lời bạn*. Nó không đọc, và cũng không trả lời. Nó là một cái khuôn mang gương mặt bạn.",
+  "pWhy2": "Nó tiêu mất thứ duy nhất mà người kia không thể lấy lại. Họ đốt một phút để gỡ câu trả lời của bạn rồi mới nhận ra chẳng có gì trong đó để đáp. Giờ nhân lên với tất cả những người bạn phát tin tới.",
+  "pWhy3": "Và nó lây. Khi một bên của cuộc trò chuyện đã tự động, bên kia cũng thôi bận tâm. Cuối cùng bạn có hai con bot lịch sự tóm tắt lẫn nhau, còn câu hỏi thật thì nằm đó không ai trả lời.",
+
+  "h2Where": "Nó xảy ra ở đâu",
+  "pWhere1": "Ở bất cứ đâu có ô trả lời. Xuất hiện nhiều nhất ở:",
+  "whereList": [
+    "DM và tin nhắn chào hàng",
+    "Bình luận LinkedIn và các luồng “chúc mừng!”",
+    "Trả lời trên X / Twitter",
+    "Bình luận Instagram và TikTok",
+    "Hộp thư hỗ trợ và biểu mẫu liên hệ",
+    "Thư nhắc lại trong email chào hàng",
+    "Ứng dụng hẹn hò",
+    "Issue GitHub và review pull request"
+  ],
+  "pWhere2": "Những chỗ đó không hỏng. Chúng chỉ được làm ra không phải để chứa tài liệu.",
+
+  "principle": "Nếu không có gì của con người để nói, thì đừng nói gì. Im lặng cũng là một câu trả lời hợp lệ.",
+
+  "quoteIntro": "Hoặc như [Sherry Turkle](https://en.wikipedia.org/wiki/Sherry_Turkle) từng nói:",
+  "quote": "“Chúng ta kỳ vọng nhiều hơn ở công nghệ và ít hơn ở nhau.”",
+
+  "ctaLabel": "Nếu bạn nhận được một câu trả lời của bot, hãy gửi họ trang này:",
+  "siteLabel": "nobotreply.com",
+
+  "footerMadeBy": "Thực hiện bởi",
+  "footerInspired": "Lấy cảm hứng từ [noslopgrenade.com](https://noslopgrenade.com) và [nohello.net](https://nohello.net), hai cách làm tốt cho giao tiếp bất đồng bộ tốt hơn."
+}
