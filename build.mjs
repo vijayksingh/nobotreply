@@ -20,6 +20,55 @@ const DIST = join(ROOT, 'dist');
 
 const SITE = 'https://nobotreply.com';
 
+/**
+ * Cloudflare Web Analytics — optional, off by default.
+ *
+ * Normally Cloudflare injects the beacon into your HTML at the edge, which means
+ * it runs during page load and lands in your blocking time. `_headers` sets
+ * `no-transform` to stop that injection (see the note there). If you want the
+ * analytics anyway, paste this site's tag here and the beacon is instead loaded
+ * from an idle callback, after the page is interactive, so it costs nothing at
+ * render time.
+ *
+ * Find the tag at: dashboard → Analytics & Logs → Web Analytics → <site> →
+ * Manage site → JS snippet (`"token": "..."`). It is public — it ships in the
+ * HTML of every site that uses it.
+ *
+ *   const WEB_ANALYTICS_TOKEN = 'a1b2c3d4e5f6...';
+ */
+const WEB_ANALYTICS_TOKEN = process.env.CF_ANALYTICS_TOKEN || '';
+
+/**
+ * The deferred beacon. Deliberately not a `<script src>` tag: it is created in
+ * JavaScript inside a `requestIdleCallback`, so it never appears in the network
+ * graph as a render-blocking resource. `verify.mjs` asserts the HTML contains no
+ * external subresource, and this stays true because the request is issued by
+ * script rather than parsed from markup.
+ */
+function analyticsSnippet() {
+  if (!WEB_ANALYTICS_TOKEN) return '';
+  return `
+<script>
+/* Cloudflare Web Analytics, loaded when the main thread is idle so it never
+   competes with rendering. See no-transform in _headers for why this is manual. */
+(function () {
+    function load() {
+        var s = document.createElement('script');
+        s.defer = true;
+        s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+        s.setAttribute('data-cf-beacon', '{"token":${JSON.stringify(WEB_ANALYTICS_TOKEN)}}');
+        document.head.appendChild(s);
+    }
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(load, { timeout: 4000 });
+    } else {
+        window.addEventListener('load', load);
+    }
+})();
+</script>
+`;
+}
+
 const AUTHOR = {
   name: 'Vijay Singh',
   github: 'https://github.com/vijayksingh',
@@ -337,7 +386,7 @@ function copyToClipboard(text) {
     </div>
     <p>${inline(t.footerInspired)}</p>
 </footer>
-
+${analyticsSnippet()}
 </body>
 </html>
 `;
@@ -464,6 +513,15 @@ ${alternates}
   );
 
   // Cloudflare Pages / Netlify headers: assets are immutable, HTML is not.
+  //
+  // `no-transform` on the HTML is load-bearing. Cloudflare's proxy injects a
+  // "Precursor" bot-verification script into every HTML response, which pulls in
+  // ~34 KB of extra JavaScript and costs ~760 ms of blocking time on a throttled
+  // mobile profile (Lighthouse performance 82 instead of 100). Cloudflare's own
+  // docs state that a `no-transform` cache directive stops the proxy from
+  // modifying the payload. Verified: the injection disappears and the page is
+  // back to a single request. Web Analytics, if wanted, is loaded explicitly
+  // from the template instead.
   await writeFile(
     join(DIST, '_headers'),
     `/favicon.svg
@@ -473,6 +531,7 @@ ${alternates}
   Cache-Control: public, max-age=31536000, immutable
 
 /*
+  Cache-Control: public, max-age=0, must-revalidate, no-transform
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
 `

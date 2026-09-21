@@ -81,9 +81,10 @@ async function main() {
     check(html.includes('name="twitter:card"'), `${lang}: twitter card`);
     check(html.includes('application/ld+json'), `${lang}: JSON-LD`);
 
-    // inline scripts must parse
+    // inline scripts: expand toggle + share, plus the optional deferred
+    // Web Analytics loader when CF_ANALYTICS_TOKEN is set at build time.
     const scripts = [...html.matchAll(/<script(?![^>]*type="application\/ld\+json")[^>]*>([\s\S]*?)<\/script>/g)];
-    check(scripts.length === 2, `${lang}: 2 inline scripts`);
+    check(scripts.length === 2 || scripts.length === 3, `${lang}: 2-3 inline scripts (found ${scripts.length})`);
     for (const [i, s] of scripts.entries()) {
       try {
         new Function(s[1]);

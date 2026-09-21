@@ -30,6 +30,53 @@ inline SVG data URIs, and the two behavioural scripts — the expand toggle and 
 button — are ~600 bytes of vanilla JS total. Fonts are the system stack, so text paints
 immediately.
 
+### The `no-transform` header is load-bearing
+
+Cloudflare's proxy **rewrites your HTML at the edge** and injects a bot-verification
+script called [Precursor](https://developers.cloudflare.com/cloudflare-challenges/precursor/)
+before `</body>`. That script then pulls in a further ~34 KB of JavaScript. Measured on
+the live domain, mobile Lighthouse profile:
+
+| | requests | transferred | bootup | TBT | performance |
+| --- | --- | --- | --- | --- | --- |
+| injection on | 9 | 43 KB | 1.6 s | **760 ms** | **82** |
+| injection off | 4 | 9 KB | 0.0 s | **0 ms** | **100** |
+
+[Cloudflare's own docs](https://developers.cloudflare.com/web-analytics/get-started/)
+note that a `public, no-transform` cache directive stops the proxy from modifying the
+payload. So `dist/_headers` sets it on the HTML, and the injection stops. Verified: the
+served HTML is byte-for-byte the generated file.
+
+This is a deliberate trade, and it is reversible — delete `no-transform` from the `/*`
+block in `build.mjs` and redeploy to get Precursor back. What it does **not** affect:
+
+- **Bot Fight Mode** and all server-side bot/DDoS/WAF protection — untouched, those run
+  at the edge regardless of what is injected into the page.
+- **Challenges and interstitials** — a real challenge is a served response, not a payload
+  rewrite, so it still works.
+
+What it *does* stop is Precursor's continuous client-side verification loop on this
+domain, and Cloudflare's automatic Web Analytics beacon injection. Precursor cannot be
+deferred — it is a security script whose whole job is to run in-page, so the only choice
+is run or don't. For a static page with no forms, logins or API there is nothing for the
+client-side loop to protect.
+
+### If you want Web Analytics back, for free
+
+Web Analytics is **not** currently enabled for `nobotreply.com` (the account has it on
+five other zones). If you add it, don't use the automatic setup — that injects the
+beacon into the HTML, which is exactly what `no-transform` suppresses. Instead set the
+site tag and the build emits an idle-loaded loader:
+
+```bash
+CF_ANALYTICS_TOKEN=<site tag> npm run build
+```
+
+The beacon is then created inside a `requestIdleCallback`, so it is fetched after the
+page is interactive and contributes nothing to blocking time. Find the tag under
+Analytics & Logs → Web Analytics → *site* → Manage site → JS snippet. It is public — it
+ships in the HTML of every site that uses it.
+
 ## Layout
 
 ```
